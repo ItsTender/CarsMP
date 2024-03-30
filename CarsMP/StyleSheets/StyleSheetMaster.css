@@ -1,0 +1,66 @@
+﻿body {
+    background-color: whitesmoke;
+}
+
+h4 {
+    text-align: left;
+    color: black;
+    font-family: Calibri;
+}
+
+h1 {
+    text-align: center;
+    font-family: serif;
+    font-size: 8vw;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    font-family: serif;
+}
+
+table {
+    text-align: center;
+    width: 1000px;
+    height: 600px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0px auto;
+}
+
+td {
+    border: 1px solid dimgray;
+    text-align: center;
+}
+
+th {
+    border: 2.5px solid gray;
+    text-align: center;
+}
+
+.header {
+    width: 1000px;
+    height: 60px;
+}
+
+.nav {
+    width: 15%;
+    height: 35px;
+    border: 1px solid silver;
+}
+
+.footer {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+}
+
+.main {
+    width: 85%;
+    height: 50px;
+    border: 1px solid silver;
+}
+
+

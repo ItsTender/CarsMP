@@ -1,0 +1,83 @@
+﻿body {
+    background-color: whitesmoke;
+}
+
+.class1 {
+    background-color: darkslategray;
+    font-family: Calibri;
+}
+
+.class2 {
+    background-color: #2a566e;
+    font-family: Calibri;
+}
+
+.class3 {
+    background-color: dodgerblue;
+    font-family: Calibri;
+}
+
+.class4 {
+    background-color: deepskyblue;
+    font-family: Calibri;
+}
+
+table {
+    text-align: center;
+    border: 5px solid gray;
+    margin: 0px auto;
+    background-color: dimgray;
+}
+
+td {
+    width: 220px;
+    height: 40px;
+    border: 1px solid dimgray;
+    font-size: 1.25vw;
+    color: whitesmoke;
+    font-family: Calibri;
+}
+
+th {
+    width: 220px;
+    height: 40px;
+    border: 2.5px solid gray;
+    font-size: 1.88vw;
+    color: whitesmoke;
+    font-family: Calibri;
+}
+
+h1 {
+    text-align: center;
+    font-family: serif;
+    position: relative;
+    font-size: 4vw;
+    color: lightgray;
+    -webkit-text-stroke: 2px gray;
+    text-transform: uppercase;
+}
+
+    h1::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 44.425%;
+        height: 100%;
+        width: 0;
+        color: deepskyblue;
+        -webkit-text-stroke: 0vw gray;
+        border-right: 2px solid deepskyblue;
+        overflow: hidden;
+        animation: animate 5s linear infinite;
+    }
+
+@keyframes animate {
+
+    0%,10%,100% {
+        width: 0;
+    }
+
+    70%,90% {
+        width: 11.125%;
+    }
+}

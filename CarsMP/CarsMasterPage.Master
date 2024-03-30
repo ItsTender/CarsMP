@@ -1,0 +1,184 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CarsMasterPage.master.cs" Inherits="CarsMP.CarsMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <title> My Favourite Cars </title>
+
+
+<style>
+
+body {
+    direction:ltr;
+    background-color: whitesmoke;
+    margin:0;
+}
+
+h4 {
+    text-align: left;
+    color: black;
+    font-family: Calibri;
+}
+
+h1 {
+    text-align: center;
+    font-family: serif;
+    font-size: 8vw;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    font-family: serif;
+}
+
+table {
+    direction:ltr;
+    width:100%;
+    height:100%;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+td {
+    text-align: center;
+}
+
+.header {
+
+    width: 100%;
+    border: 1px solid silver;
+    text-align: center;
+
+}
+
+.nav {
+
+    width:25%;
+    border: 1px solid silver;
+    text-align: center;
+}
+
+.footer {
+
+    width:25%;
+    height: 50px;
+    border: 1px solid silver;
+
+}
+
+.main {
+    width:25%;
+    height: 380px;
+    border: 1px solid silver;
+}
+
+
+    </style> 
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+                    <table>
+
+                        <tr>
+
+                        <td class="header" style="width:31.5%">
+                                <h2 id="current" style="color:black; font-family:Calibri; font-size:x-large; font-family:Calibri"> </h2>
+                                <h3> <a style="color:black; font-size:x-large"> </a>  </h3>
+                                <h2 id="datetime" style="color:black; font-family:Calibri; font-size:x-large; font-family:Calibri"> </h2>
+                        </td> 
+
+                        <td class="header" style="width:37%">
+                                <img src="../Images/Car_banner.jpg" title="Favourite Cars Banner" alt="WebPageBanner" width="700" height="225" />
+                        </td> 
+
+                        <td class="header" style="width:31.5%">
+                                     <% Response.Write(UserOptions); %>
+                        </td> 
+
+                        </tr>
+
+                        <tr>
+                            <td class="nav" colspan="3">
+
+                                    <h3 style="color: deepskyblue; font-family:Calibri"> <a href="Intro.aspx"  style="color: deepskyblue"> Intro </a>  
+                                        <a> &nbsp </a>
+                                        <a> &nbsp </a>
+                                     <a href="Cars.aspx"  style="color: deepskyblue"> Main </a>
+                                        <a> &nbsp </a>
+                                        <a> &nbsp </a>
+                                     <a href="Specs.aspx"  style="color: deepskyblue"> Car Specs </a> 
+                                        <a> &nbsp </a>
+                                        <a> &nbsp </a>
+                                        <% if (Session["uName"] != null) {%>
+
+                                        <a href="SpecialCars.aspx"  style="color: deepskyblue"> Special Cars </a>
+
+                                        <%} else {%>    
+                                        
+                                        <a href="AdminLogin.aspx"  style="color: deepskyblue"> Admin Login </a>
+                                        
+                                        <%}
+                                        if (Session["admin"] == null && Session["uName"] != null) {%>
+                                        <a> &nbsp </a>
+                                        <a> &nbsp </a>
+                                        <a href="AdminLogin.aspx"  style="color: deepskyblue"> Admin Login </a>
+                                        <%}
+                                            
+                                        %> 
+                                    </h3>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td class="main" colspan="3" > <h2> 
+                                                  <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                                                  </asp:ContentPlaceHolder>
+
+                                              </h2> </td>
+                            </tr>
+
+
+                        <tr> 
+                            <td class="footer" colspan="3"> 
+                                <h3 style="font-family:Calibri; color:black"> 
+                                    <a href="mailto:tawfeeqshahoud@gmail.com" style="color:black; text-align:center"> by Tawfeeq Shahoud </a>
+                                </h3> 
+
+                                <h3 style="font-family:Calibri; color:black; text-align:start; margin-top:0px;"> 
+                                     <a> &nbsp </a>
+                                     <a> &nbsp </a>
+                                     <a style="color:black; align-content:start;"> Users that have Logged in: <%= loginCounter %> </a>
+                                </h3>
+                            </td>
+                        </tr>
+
+                    </table>
+
+
+
+    <script> 
+
+        let time = document.getElementById("current");
+        let date = document.getElementById("datetime");
+
+        setInterval(() => {
+            let d = new Date();
+            time.innerHTML = d.toLocaleTimeString();
+            date.innerHTML = d.toLocaleDateString();
+        })
+
+    </script>
+       
+</body>
+</html>

@@ -1,0 +1,52 @@
+﻿body {
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    font-family: serif;
+    position: relative;
+    font-size: 3vw;
+    color: lightgray;
+    -webkit-text-stroke: 1.5px gray;
+    text-transform: uppercase;
+}
+
+    h1::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 41.91%;
+        height: 100%;
+        width: 0;
+        color: deepskyblue;
+        -webkit-text-stroke: 0vw gray;
+        border-right: 2px solid deepskyblue;
+        overflow: hidden;
+        animation: animate 5s linear infinite;
+    }
+
+@keyframes animate {
+
+    0%,10%,100% {
+        width: 0;
+    }
+
+    70%,90% {
+        width: 16.1%;
+    }
+}
+
+h4 {
+    text-align: left;
+    color: black;
+    font-family: Calibri;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    font-family: serif;
+}
