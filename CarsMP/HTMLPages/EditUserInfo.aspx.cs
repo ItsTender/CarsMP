@@ -26,7 +26,7 @@ namespace CarsMP.HTMLPages
 
             string fileName = "usersDB.mdf";
 
-            if (Session["uName"] == null)
+            if (Session["uName"].ToString() == "Guest")
             {
                 msg += "<a>You are not Registered to the Website</a> <br/><br/>";
                 msg += "<a href='Login.aspx' style=\"color:deepskyblue; font-size:xx-large; font-family:Calibri\">Login with your Account</a> <br /> <br />";

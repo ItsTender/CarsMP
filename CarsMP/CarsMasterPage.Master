@@ -116,7 +116,7 @@ td {
                                      <a href="Specs.aspx"  style="color: deepskyblue"> Car Specs </a> 
                                         <a> &nbsp </a>
                                         <a> &nbsp </a>
-                                        <% if (Session["uName"] != null) {%>
+                                        <% if (Session["uName"].ToString() != "Guest") {%>
 
                                         <a href="SpecialCars.aspx"  style="color: deepskyblue"> Special Cars </a>
 
@@ -125,7 +125,7 @@ td {
                                         <a href="AdminLogin.aspx"  style="color: deepskyblue"> Admin Login </a>
                                         
                                         <%}
-                                        if (Session["admin"] == null && Session["uName"] != null) {%>
+                                        if (Session["admin"].ToString() == "no" && Session["uName"].ToString() != "Guest") {%>
                                         <a> &nbsp </a>
                                         <a> &nbsp </a>
                                         <a href="AdminLogin.aspx"  style="color: deepskyblue"> Admin Login </a>
@@ -158,7 +158,7 @@ td {
                                 <h3 style="font-family:Calibri; color:black; text-align:start; margin-top:0px;"> 
                                      <a> &nbsp </a>
                                      <a> &nbsp </a>
-                                     <a style="color:black; align-content:start;"> Users that have Logged in: <%= loginCounter %> </a>
+                                     <a style="color:black; align-content:start;"> Users that Logged in: <%= loginCounter %> </a>
                                 </h3>
                             </td>
                         </tr>

@@ -16,7 +16,7 @@ namespace CarsMP.HTMLPages
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (Session["uName"] == null)
+            if (Session["uName"].ToString() == "Guest")
             {
                 msg += "<h4 style=\"font-size:28px; color: red; text-align: center;\"> Registered Account is not Active, please Login to Have Acceess to Special Cars! </h3>";
                 msg += "<a href='Login.aspx' style=\"color:deepskyblue; font-size:xx-large; font-family:Calibri\">Login</a> <br /> <br />";

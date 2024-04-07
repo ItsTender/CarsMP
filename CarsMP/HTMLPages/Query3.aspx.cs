@@ -16,7 +16,7 @@ namespace CarsMP.HTMLPages
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (Session["admin"] == null)
+            if (Session["admin"].ToString() == "no")
             {
                 msg += "<h4 style=\"font-size:28px; color: red; text-align: center;\"> Admin Account is not Active, please Login to Have Acceess! </h3>";
                 msg += "<a href='AdminLogin.aspx' style=\"color:deepskyblue; font-size:xx-large; font-family:Calibri\">Login as Admin</a> <br /> <br />";

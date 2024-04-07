@@ -38,8 +38,7 @@ namespace CarsMP.HTMLPages
                     Application.Lock();
 
                     // Increase the Login Counter by one!
-                    if (Application["counter"] == null) Application["counter"] = 1;
-                    else Application["counter"] = (int)Application["counter"] + 1;
+                    Application["counter"] = (int)Application["counter"] + 1;
 
                     Application.UnLock();
 

@@ -14,9 +14,9 @@ namespace CarsMP
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (Application["counter"] != null) loginCounter = Application["counter"].ToString();
+            loginCounter = Application["counter"].ToString();
 
-            if (Session["userFName"] != null)
+            if (Session["userFName"].ToString() != "Guest")
             {
 
                 UserOptions = "<a style=\"color:black; font-size:xx-large; font-family:Calibri; font-style:oblique; font-weight:800\"> Hello, ";
@@ -24,7 +24,7 @@ namespace CarsMP
                 UserOptions += "<a> <br /> <br />";
 
 
-                if(Session["admin"] == null) UserOptions += "<a href='EditUserInfo.aspx' style=\"color:deepskyblue; font-size:x-large; font-family:Calibri\">Edit Profile</a> <br />";
+                if(Session["admin"].ToString() == "no") UserOptions += "<a href='EditUserInfo.aspx' style=\"color:deepskyblue; font-size:x-large; font-family:Calibri\">Edit Profile</a> <br />";
                 else UserOptions += "<a href='AdminControl.aspx' style=\"color:deepskyblue; font-size:x-large; font-family:Calibri\">Admin Page</a> <br />";
 
                 UserOptions += "<a href='Logout.aspx' style=\"color:deepskyblue; font-size:x-large; font-family:Calibri\">Logout</a>";
