@@ -25,7 +25,9 @@ namespace CarsMP.HTMLPages
             {
 
                 msg += "<a href='AdminShowUsers.aspx' style=\"color:deepskyblue; font-size:xx-large; font-family:Calibri\">Show All Users</a> <br />";
-                msg += "<a href='AdminDeleteUsers' style=\"color:deepskyblue; font-size:xx-large; font-family:Calibri\">Delete Users</a> <br /><br />";
+                msg += "<a href='AdminDeleteUsers' style=\"color:deepskyblue; font-size:xx-large; font-family:Calibri\">Delete Users</a> <br />";
+                msg += "<a href='AdminDeleteUsersQuery' style=\"color:deepskyblue; font-size:xx-large; font-family:Calibri\">Delete Users with Query</a> <br /><br />";
+
                 msg += "<a href='Query1.aspx' style=\"color:deepskyblue; font-size:xx-large; font-family:Calibri\">Show all Users that have the letter 'a' in their First Names</a> <br />";
                 msg += "<a href='Query2.aspx' style=\"color:deepskyblue; font-size:xx-large; font-family:Calibri\">Show all Users that have the letter 's' in their Last Names</a> <br />";
                 msg += "<a href='Query3.aspx' style=\"color:deepskyblue; font-size:xx-large; font-family:Calibri\">Show all Users that use 'Gmail' and live in Nazareth, Jerusalem or Tel Aviv</a> <br />";

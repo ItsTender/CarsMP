@@ -26,6 +26,7 @@ namespace CarsMP
             // Guest User!
             Session["uName"] = "Guest";
             Session["userFName"] = "Guest";
+            Session["Delete"] = 0;
             Session["admin"] = "no";
 
         }
@@ -35,6 +36,7 @@ namespace CarsMP
             // Guest User!
             Session["uName"] = "Guest";
             Session["userFName"] = "Guest";
+            Session["Delete"] = 0;
             Session["admin"] = "no";
 
         }

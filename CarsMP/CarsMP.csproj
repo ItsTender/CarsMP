@@ -130,9 +130,11 @@
     <Content Include="Global.asax" />
     <Content Include="HTMLPages\AdminControl.aspx" />
     <Content Include="HTMLPages\AdminDeleteUsers.aspx" />
+    <Content Include="HTMLPages\AdminDeleteUsersQuery.aspx" />
     <Content Include="HTMLPages\AdminLogin.aspx" />
     <Content Include="HTMLPages\AdminShowUsers.aspx" />
     <Content Include="HTMLPages\DeleteAction.aspx" />
+    <Content Include="HTMLPages\DeleteActionQuery.aspx" />
     <Content Include="HTMLPages\EditUserInfo.aspx" />
     <Content Include="HTMLPages\Login.aspx" />
     <Content Include="HTMLPages\Logout.aspx" />
@@ -204,6 +206,7 @@
     <Content Include="Images\ZO6corvetteInterior.jpg" />
     <Content Include="Images\ZO6corvetteRear.jpg" />
     <Content Include="JavaScript\checkRegistration.js" />
+    <Content Include="JavaScript\detectField.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -319,6 +322,13 @@
     <Compile Include="HTMLPages\AdminDeleteUsers.aspx.designer.cs">
       <DependentUpon>AdminDeleteUsers.aspx</DependentUpon>
     </Compile>
+    <Compile Include="HTMLPages\AdminDeleteUsersQuery.aspx.cs">
+      <DependentUpon>AdminDeleteUsersQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\AdminDeleteUsersQuery.aspx.designer.cs">
+      <DependentUpon>AdminDeleteUsersQuery.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HTMLPages\AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -339,6 +349,13 @@
     </Compile>
     <Compile Include="HTMLPages\DeleteAction.aspx.designer.cs">
       <DependentUpon>DeleteAction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\DeleteActionQuery.aspx.cs">
+      <DependentUpon>DeleteActionQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\DeleteActionQuery.aspx.designer.cs">
+      <DependentUpon>DeleteActionQuery.aspx</DependentUpon>
     </Compile>
     <Compile Include="HTMLPages\EditUserInfo.aspx.cs">
       <DependentUpon>EditUserInfo.aspx</DependentUpon>

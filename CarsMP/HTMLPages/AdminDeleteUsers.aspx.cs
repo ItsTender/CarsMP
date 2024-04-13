@@ -39,7 +39,7 @@ namespace CarsMP.HTMLPages
                     st += "<table style=\"border: 1px solid black; margin-top:50px;\">";
 
                     st += "<tr>";
-                    st += "<th style = ;text-align: center; border: 1px solid black; width: 100px;'> </th>";
+                    st += "<th style = 'text-align: center; border: 1px solid black; width: 100px;'> </th>";
                     st += "<th style = 'text-align: center; border: 1px solid black; '>Username</th>";
                     st += "<th style = 'text-align: center; border: 1px solid black; '>first Name</th>";
                     st += "<th style = 'text-align: center; border: 1px solid black; '>Last Name</th>";

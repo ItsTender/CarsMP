@@ -27,8 +27,8 @@ namespace CarsMP.HTMLPages
                 string sqlDelete = "DELETE FROM usersTbl WHERE uName ='" + uName + "'";
 
                 Helper.DoQuery(fileName, sqlDelete);
+                Response.Redirect("AdminDeleteUsers.aspx");
             }
-            Response.Redirect("AdminDeleteUsers.aspx");
 
         }
     }
