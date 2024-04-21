@@ -23,7 +23,7 @@ in this App you can Register, Login and Login as Admin all through an SQL Data B
 
 first step after cloning the project is to go to the source repo files of the CarsMP project, then you'll need to put the "roslyn" folder in the "project_name"/CarsMP/bin folder, secondly you'll need to put the "App_Data" folder in the "CarsMP" folder besides the App_Start folder to be exact.
 
-this way the App may be started from VS or VC successfully!!, but the Helper conn path has to be updated manually so don't forget about it...........
+this way the App may be started from VS or VC successfully!!
 
 <br />
 
