@@ -155,7 +155,6 @@
     <Content Include="HTMLPages\SF90Stradale.aspx" />
     <Content Include="HTMLPages\SpecialCars.aspx" />
     <Content Include="HTMLPages\Specs.aspx" />
-    <Content Include="HTMLPages\TableSpecs.aspx" />
     <Content Include="Images\AMGOne.jpg" />
     <Content Include="Images\AMGOne1.jpg" />
     <Content Include="Images\AMGOneInterior.jpg" />
@@ -496,13 +495,6 @@
     </Compile>
     <Compile Include="HTMLPages\Specs.aspx.designer.cs">
       <DependentUpon>Specs.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="HTMLPages\TableSpecs.aspx.cs">
-      <DependentUpon>TableSpecs.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HTMLPages\TableSpecs.aspx.designer.cs">
-      <DependentUpon>TableSpecs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

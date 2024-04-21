@@ -6,7 +6,6 @@
     <title> Edit User Information for those who are logged in! </title>
     <script src="../JavaScript/checkRegistration.js"></script>
 
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 

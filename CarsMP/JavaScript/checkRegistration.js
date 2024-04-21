@@ -2,10 +2,17 @@
 
     var uName = document.getElementById("username").value;
     var msg = "";
+    var msg = "";
     if (uName.length < 6)
-        msg = "Username is too Short!";
-    else if (uName.length > 15)
-        msg = "Username must be between 6-15 Characters!";
+        msg = "user name does not exist or too short"
+    else if (uName.length > 30)
+        msg = "user name must have 6-30 letters"
+    else if (isHebrew(uName))
+        msg = "user name can not be in hebrew";
+    else if (isQuot(uName))
+        msg = "user name must not have chars like Punctuation";
+    else if (isBadChars(uName))
+        msg = "user name must be only in english and in letters";
     if (msg != "") {
         document.getElementById("mUName").value = msg;
         document.getElementById("mUName").style.display = "inline";
@@ -47,6 +54,8 @@
         msg = "The email address is too short!";
     else if (mail.length > 30)
         msg = "The email address has to be between 6-30 letters!";
+    else if (isQuot(mail) || isBadChars(mail))
+        msg = "Email dose include forbidden chars"
     else if (atSign == -1 || atSign != mail.lastIndexOf('@'))
         msg = "The Email Adress must have exactly One @";
     else if (dotSign == -1)
@@ -79,6 +88,22 @@
 
     //---------------------------------------------------------------------
 
+    var hobies = document.getElementsByName("hobies");
+    var hobChecked = false;
+
+    for (var i = 0; i < hobies.length; i++)
+        if (hobies[i].checked) hobChecked = true;
+
+    if (hobChecked == false) {
+        document.getElementById("mHobies").value = "Choose a Hobby!"
+        document.getElementById("mHobies").style.display = "inline";
+        return false;
+    }
+
+    else document.getElementById("mHobies").style.display = "none";
+
+    //---------------------------------------------------------------------
+
     var pw = document.getElementById("password").value;
     var pw1 = document.getElementById("rePassword").value;
     if (pw.length < 8 || pw.length > 10) {
@@ -99,23 +124,40 @@
     }
     else document.getElementById("mPassword").style.display = "none";
 
-    //---------------------------------------------------------------------
+    // everything is checked and is fine!
+    return true;
 
-    //var hobies = document.getElementById("hobies");
-    //var hobChecked = false;
+}
 
+/// check if there are forbidden chars like {''}
+function isQuot(str) {
+    var quot = '\"', quot1 = "\'";
+    if (str.indexOf(quot) != -1 || str.indexOf(quot1) != -1)
+        return true;
+    return false;
+}
 
-    //for (var i = 0; i < hobies.length; i++) {
-      //  if (hobies[i].checked) hobChecked = true;
-    //}
+// check if contains forbidden chars like exist:"$%^&*()-! []{}<>?
+function isBadChars(str) {
+    var badChr = "$%^&*()-! []{}<>?";
+    var len = badChr.length;
+    var i = 0, pos, ch;
+    while (i < len) {
+        ch = badChr.charAt(i);
+        pos = str.indexOf(ch);
+        if (pos != -1)
+            return true;
+        i++;
+    }
+    return false;
+}
 
-    //if (hobChecked == false) {
-    //   msg = "Choose at least One Hobby";
-    //    document.getElementById("mHobies").value = msg;
-    //    document.getElementById("mHobies").style.display = "inline";
-    //
-    //    return false;
-    //}
-    //else document.getElementById("mHobies").style.display = "none";
+// check letters in hebrew
+function isHebrew(str) {
+    for (var i = 0; i < str.length; i++) {
+        if (str.charAt(i) >= 'א'(str.charAt(i) <= 'ת'))
+
+            return true;
+    }
 
 }

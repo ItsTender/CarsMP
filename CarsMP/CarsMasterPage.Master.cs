@@ -10,11 +10,8 @@ namespace CarsMP
     public partial class CarsMasterPage : System.Web.UI.MasterPage
     {
         public string UserOptions = "";
-        public string loginCounter = "0";
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            loginCounter = Application["counter"].ToString();
 
             if (Session["userFName"].ToString() != "Guest")
             {

@@ -38,6 +38,9 @@ namespace CarsMP.HTMLPages
                 if (length == 0) msg = "There are No Registered Users to Show";
                 else
                 {
+                    st += sqlSelect;
+                    st += "</br>";
+
                     st += "<table style=\"border: 1px solid black; margin-top:50px;\">";
 
                     st += "<tr>";

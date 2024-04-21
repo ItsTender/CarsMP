@@ -64,9 +64,9 @@ td {
 
 .footer {
 
-    width:25%;
+    width:100%;
     height: 50px;
-    border: 1px solid silver;
+    border: 1px solid whitesmoke;
 
 }
 
@@ -75,6 +75,7 @@ td {
     height: 380px;
     border: 1px solid silver;
 }
+
 
 
     </style> 
@@ -108,14 +109,11 @@ td {
                             <td class="nav" colspan="3">
 
                                     <h3 style="color: deepskyblue; font-family:Calibri"> <a href="Intro.aspx"  style="color: deepskyblue"> Intro </a>  
-                                        <a> &nbsp </a>
-                                        <a> &nbsp </a>
+                                        <a> &nbsp </a><a> &nbsp </a>
                                      <a href="Cars.aspx"  style="color: deepskyblue"> Main </a>
-                                        <a> &nbsp </a>
-                                        <a> &nbsp </a>
+                                        <a> &nbsp </a><a> &nbsp </a>
                                      <a href="Specs.aspx"  style="color: deepskyblue"> Car Specs </a> 
-                                        <a> &nbsp </a>
-                                        <a> &nbsp </a>
+                                        <a> &nbsp </a><a> &nbsp </a>
                                         <% if (Session["uName"].ToString() != "Guest") {%>
 
                                         <a href="SpecialCars.aspx"  style="color: deepskyblue"> Special Cars </a>
@@ -126,8 +124,7 @@ td {
                                         
                                         <%}
                                         if (Session["admin"].ToString() == "no" && Session["uName"].ToString() != "Guest") {%>
-                                        <a> &nbsp </a>
-                                        <a> &nbsp </a>
+                                        <a> &nbsp </a><a> &nbsp </a>
                                         <a href="AdminLogin.aspx"  style="color: deepskyblue"> Admin Login </a>
                                         <%}
                                             
@@ -149,21 +146,21 @@ td {
                             </tr>
 
 
-                        <tr> 
-                            <td class="footer" colspan="3"> 
-                                <h3 style="font-family:Calibri; color:black"> 
-                                    <a href="mailto:tawfeeqshahoud@gmail.com" style="color:black; text-align:center"> by Tawfeeq Shahoud </a>
-                                </h3> 
+<tr> 
+<td style="width:31.5%; text-align:left" class="footer">
 
-                                <h3 style="font-family:Calibri; color:black; text-align:start; margin-top:0px;"> 
-                                     <a> &nbsp </a>
-                                     <a> &nbsp </a>
-                                     <a style="color:black; align-content:start;"> Users that Logged in: <%= loginCounter %> </a>
-                                </h3>
-                            </td>
-                        </tr>
+    <a> &nbsp </a ><a> &nbsp </a>
+    <h3 style="color:black; font-family:Calibri; font-family:Calibri"> People that logged in: <%= Application["counter"] %> </h3>
+
+</td>
+<td style="width:37%" class="footer">
+ <h3><a href="mailTo:tawfeeqshahoud@gmail.com"  style="color: deepskyblue"> by Tawfeeq Shahoud</a></h3>
+<td style="width:31.5%" class="footer"></td>
+
+    </tr>
 
                     </table>
+
 
 
 

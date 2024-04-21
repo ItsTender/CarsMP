@@ -22,8 +22,8 @@ public class Helper
 {     
 	public static SqlConnection ConnectToDb(string fileName)
     {
-            string path = HttpContext.Current.Server.MapPath("App_Data/") + fileName;
-		path = "C:\\Taba\\Projects\\CarsMP\\CarsMP\\App_Data\\usersDB.mdf";
+            string path = HttpContext.Current.Server.MapPath("/App_Data/") + fileName;
+		//path = "C:\\Taba\\Projects\\CarsMP\\CarsMP\\App_Data\\usersDB.mdf";
         //string connString = @"Data Source=.\SQLEXPRESS;AttachDbFileName=" + path + ";Integrated Security=True;User Instance=True";
         //string connString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = |DataDirectory|\" + fileName + " Integrated Security = True";
         //string connString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = " + path + " Integrated Security = True";

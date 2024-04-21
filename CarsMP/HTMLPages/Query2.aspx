@@ -11,7 +11,11 @@
 
 
 
-               <%= st %>
+    <% if(Session["admin"].ToString() == "yes") { %>
+    
+    <a> <%= st %> </a>
+
+    <%} %>    
 
 
       <h3 style="margin-bottom:50px;"><%= msg %></h3>

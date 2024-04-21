@@ -131,7 +131,8 @@
         <tr>
             <td> Hobies: </td>
 
-            <td><input id="hobies" type ="checkbox" name ="hobies" value ="Football" /> Football
+            <td>
+    <input type = "checkbox" name ="hobies" value ="Football" /> Football
     &nbsp; 
     <input type = "checkbox" name = "hobies" value = "Basket Ball" / /> Basket Ball
     &nbsp;
