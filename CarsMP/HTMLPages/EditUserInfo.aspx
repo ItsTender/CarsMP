@@ -4,13 +4,13 @@
 
     <meta charset="utf-8" />
     <title> Edit User Information for those who are logged in! </title>
-    <script src="../JavaScript/checkRegistration.js"></script>
+    <script src="../JavaScript/CheckForm.js"></script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-    <form method="post" runat="server" onsubmit="return CheckForm()">
+<form method="post" runat="server" onsubmit="return CheckForm();">
 
 <table style="border: 0px solid white ; margin: 0px auto;" width="1000px">
 
@@ -193,60 +193,60 @@
 
     <%if (hob1 == "T")
     { %>
-        <input id="hobies" type ="checkbox" name ="hobies" checked="checked" value ="Football" /> Football
+        <input type ="checkbox"; name="hobies"; checked="checked"; value ="Football" /> Football
         &nbsp; 
       <%}
     else
     { %> 
-        <input id="hobies" type ="checkbox" name ="hobies" value ="Football" /> Football
+        <input type ="checkbox"; name="hobies"; value ="Football" /> Football
         &nbsp;
      <%} %>
 
 
     <%if (hob2 == "T")
 { %>
-    <input type = "checkbox" name = "hobies" value = "Basket Ball" checked="checked" /> Basket Ball
+    <input type = "checkbox"; name="hobies"; value = "Basket Ball"; checked="checked" /> Basket Ball
      &nbsp;
   <%}
 else
 { %> 
-    <input type = "checkbox" name = "hobies" value = "Basket Ball" / /> Basket Ball
+    <input type = "checkbox"; name="hobies"; value = "Basket Ball" / /> Basket Ball
      &nbsp;
  <%} %>
 
 
     <%if (hob3 == "T")
 { %>
-    <input type = "checkbox" name = "hobies" value = "Swimming" checked="checked" /> Swimming
+    <input type = "checkbox"; name="hobies"; value = "Swimming"; checked="checked" /> Swimming
     &nbsp;
   <%}
 else
 { %> 
-    <input type = "checkbox" name = "hobies" value = "Swimming" /> Swimming
+    <input type = "checkbox"; name="hobies"; value = "Swimming" /> Swimming
     &nbsp;
  <%} %>
 
 
     <%if (hob4 == "T")
 { %>
-    <input type = "checkbox" name = "hobies" value = "Programming" checked="checked" /> Programming
+    <input type = "checkbox"; name="hobies"; value = "Programming"; checked="checked" /> Programming
      &nbsp;
   <%}
 else
 { %> 
-    <input type = "checkbox" name = "hobies" value = "Programming" /> Programming
+    <input type = "checkbox"; name="hobies"; value = "Programming" /> Programming
     &nbsp;
  <%} %>
 
 
     <%if (hob5 == "T")
 { %>
-    <input type = "checkbox" name = "hobies" value = "Video Games" checked="checked" /> Video Games
+    <input type = "checkbox"; name="hobies"; value = "Video Games"; checked="checked" /> Video Games
     &nbsp;
   <%}
 else
 { %> 
-    <input type = "checkbox" name = "hobies" value = "Video Games" /> Video Games
+    <input type = "checkbox"; name="hobies"; value = "Video Games" /> Video Games
     &nbsp;
  <%} %>
 
@@ -287,5 +287,6 @@ else
       &nbsp;
       <%  Response.Write(msg);  %>
 </h2>
+
 
 </asp:Content>

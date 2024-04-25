@@ -4,72 +4,82 @@
 
     <meta charset="utf-8" />
     <title> Signup to my WebSite </title>
-    <script src="../JavaScript/checkRegistration.js"></script>
+    <script src="../JavaScript/CheckForm.js"></script>
 
+    <style>
+
+        table{
+            margin: auto; 
+            border: 0;
+        }
+
+        input {
+            text-align:center
+        }
+
+    </style>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-    <form method="post" runat="server" onsubmit="return CheckForm()">
+<form method="post" runat="server" onsubmit="return CheckForm();">
 
-    <table style="border: 0px solid white ; margin: 0px auto;" width="1000px">
+    <table>
 
         <tr>
-            <td colspan="3"><h2 style="color:deepskyblue;"> Registration Form </h2></td>
+            <td colspan="2"><h2 style="color:deepskyblue;"> Registration Form </h2></td>
         </tr>
 
         <tr></tr>
 
         <tr>
             <td> Username: </td>
-            <td><input type="text"; id="username"; name="username" required/></td>
-            <td> <input type="text"; id="mUName"; size="30"; style="display:none; background-color:silver;" disabled="disabled" /> </td>
+            <td><input type="text"; id="username"; name="username" required/> </td>
+            <td><input type="text"; id="mUName"; size="33"; style="display:none; background-color:silver;" disabled="disabled" /> </td>
         </tr>
 
 
         <tr>
-                    <td> First Name: </td>
-            <td><input type="text"; id="firstName"; name="firstName" required/></td>
-            <td> <input type="text"; id="mFName"; size="30"; style="display:none; background-color:silver;" disabled="disabled" /> </td>
+            <td> First Name: </td>
+            <td><input type="text"; id="firstName"; name="firstName" required/> </td>
+            <td><input type="text"; id="mFName"; size="33"; style="display:none; background-color:silver;" disabled="disabled" /> </td>
         </tr>
 
 
         <tr>
-                     <td> Last Name: </td>
-            <td><input type="text"; id="lastName"; name="lastName" required/></td>
-            <td> <input type="text"; id="mLName"; size="30"; style="display:none; background-color:silver;" disabled="disabled" /> </td>
+            <td> Last Name: </td>
+            <td><input type="text"; id="lastName"; name="lastName" required/> </td>
+            <td><input type="text"; id="mLName"; size="33"; style="display:none; background-color:silver;" disabled="disabled" /> </td>
         </tr>
 
 
         <tr>
-                      <td> Email Adress: </td>
-            <td><input type="text"; id="email"; name="email" required/></td>
-            <td> <input type="text"; id="mEmail"; size="30"; style="display:none; background-color:silver; width:300px;" disabled="disabled" /> </td>
+            <td> Email Adress: </td>
+            <td><input type="text"; id="email"; name="email" required/> </td>
+            <td><input type="text"; id="mEmail"; size="33"; style="display:none; background-color:silver; width:300px;" disabled="disabled" /> </td>
         </tr>
         
 
         <tr>
-                      <td> Year Born: </td>
+            <td> Year Born: </td>
             <td><select id="year" name="year"> <%= yrBorn  %> </select></td>
         </tr>
 
         
         <tr>
-                      <td> Gender: </td>
+            <td> Gender: </td>
             <td>
                 <input type="radio" name="gender" value="male" checked /> male
                 <input type="radio" name="gender" value="female" /> female
-
             </td>
         </tr>
 
 
         <tr>
                       <td> Phone Number: </td>
-            <td>
 
-            <select name="prefix"> 
+            <td><select name="prefix"> 
 
                 <option value="050"> 050 </option>
                 <option value="052"> 052 </option>
@@ -89,20 +99,16 @@
 
                <a> &nbsp </a>
 
-              <input type="number"; id="Phone"; name="Phone" required/>
-
-            </td>
-
-            <td> <input type="text"; id="mPhone"; size="30"; style="display:none; background-color:silver;" disabled="disabled" /> </td>
+              <input type="text"; id="Phone"; name="Phone" required/></td>
+              <td><input type="text"; id="mPhone"; size="33"; style="display:none; background-color:silver;" disabled="disabled" /> </td>
 
         </tr>
 
 
        <tr>
                       <td> City: </td>
-                      <td>
 
-                          <select name="city"> 
+                      <td><select name="city"> 
 
     <option value="Nazareth"> Nazareth </option>
     <option value="Safed"> Safed </option>
@@ -122,9 +128,9 @@
     <option value="Eilat"> Eilat </option>
 
                          </select>
+                         </td>
 
-                      </td>
-            <td> <input type="text"; id="mCity"; size="30"; style="display:none; background-color:silver;" disabled="disabled"/> </td>
+               <td><input type="text"; id="mCity"; size="33"; style="display:none; background-color:silver;" disabled="disabled"/> </td>
         </tr>
 
 
@@ -132,45 +138,46 @@
             <td> Hobies: </td>
 
             <td>
-    <input type = "checkbox" name ="hobies" value ="Football" /> Football
+
+    <input type = "checkbox"; name="hobies"; value ="Football" /> Football
     &nbsp; 
-    <input type = "checkbox" name = "hobies" value = "Basket Ball" / /> Basket Ball
+    <input type = "checkbox"; name="hobies"; value = "Basket Ball" / /> Basket Ball
     &nbsp;
-    <input type = "checkbox" name = "hobies" value = "Swimming" /> Swimming
+    <input type = "checkbox"; name="hobies"; value = "Swimming" /> Swimming
     &nbsp;
-    <input type = "checkbox" name = "hobies" value = "Programming" /> Programming
+    <input type = "checkbox"; name="hobies"; value = "Programming" /> Programming
     &nbsp;
-    <input type = "checkbox" name = "hobies" value = "Video Games" /> Video Games
+    <input type = "checkbox"; name="hobies"; value = "Video Games" /> Video Games
     &nbsp;
             </td>
-            <td> <input type="text"; id="mHobies"; size="30"; style="display:none; background-color:silver;" disabled="disabled"/> </td>
+
+              <td><input type="text"; id="mHobies"; size="33"; style="display:none; background-color:silver;" disabled="disabled"/> </td>
 
         </tr>
 
 
-        <tr>
-                      <td> Password: </td>
-                      <td><input type="password"; id="password"; name="password" required/></td>
-            <td> <input type="text"; id="mPassword"; size="30"; style="display:none; background-color:silver; width:300px;" disabled="disabled" /> </td>
+        <tr> 
+             <td> Password: </td>
+             <td><input type="password"; id="password"; name="password" required/> </td>
+             <td><input type="text"; id="mPassword"; size="33"; style="display:none; background-color:silver; width:300px;" disabled="disabled" /> </td>
         </tr>
 
 
         <tr>
             <td> Confirm Password: </td>
-             <td><input type="password"; id="rePassword"; name="rePassword" required/></td>
+            <td><input type="password"; id="rePassword"; name="rePassword" required/></td>
         </tr>
 
         <tr></tr>
 
         <tr>
-            <td colspan="3"> <input type="submit"; value="Register" ; name="submit"; id="submit" /></td>
+            <td colspan="2"> <input type="submit"; value="Register" ; name="submit"; id="submit" /></td>
         </tr>
 
 
     </table>
 
-    </form>
-
+</form>
 
 
    <h2 style="font-size:xx-large">

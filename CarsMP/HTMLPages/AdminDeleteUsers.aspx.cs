@@ -82,7 +82,11 @@ namespace CarsMP.HTMLPages
 
                 }
 
-                st += "</table>";
+                st += "</table> <br />";
+
+                // the Delete All Users Button!
+                st += "<a href = 'DeleteAllAction.aspx " + "'style=\"color: deepskyblue\" > [* Delete All Users *] </a>";
+
 
                 msg = " <h3 style=\"color:deepskyblue; font-size:x-large; font-family:Calibri\"> there are " + length + " registered user/s </h3>";
 

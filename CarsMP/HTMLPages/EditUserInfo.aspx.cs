@@ -97,7 +97,7 @@ namespace CarsMP.HTMLPages
                     }
 
 
-                    if (this.IsPostBack)
+                    if (Request.Form["submit"] != null)
                     {
                         fName = Request.Form["firstName"];
                         lName = Request.Form["lastName"];
@@ -109,19 +109,17 @@ namespace CarsMP.HTMLPages
                         yearBorn = Request.Form["year"];
                         pass = Request.Form["password"];
 
-                        string Hobies = Request.Form["hobies"].ToString();
-                        hob1 = "F";
-                        hob2 = "F";
-                        hob3 = "F";
-                        hob4 = "F";
-                        hob5 = "F";
+                        String Hobies = Request.Form["hobies"];
+                        char ch1 = 'F', ch2 = 'F', ch3 = 'F', ch4 = 'F', ch5 = 'F';
 
-                        if (Hobies.Contains("Football")) hob1 = "T";
-                        if (Hobies.Contains("Basket Ball")) hob2 = "T";
-                        if (Hobies.Contains("Swimming")) hob3 = "T";
-                        if (Hobies.Contains("Programming")) hob4 = "T";
-                        if (Hobies.Contains("Video Games")) hob5 = "T";
-
+                        if (Hobies != null)
+                        {
+                            if (Hobies.Contains("Football")) ch1 = 'T';
+                            if (Hobies.Contains("Basket Ball")) ch2 = 'T';
+                            if (Hobies.Contains("Swimming")) ch3 = 'T';
+                            if (Hobies.Contains("Programming")) ch4 = 'T';
+                            if (Hobies.Contains("Video Games")) ch5 = 'T';
+                        }
 
 
                         // Updating the newly entered User Info!!
@@ -134,11 +132,11 @@ namespace CarsMP.HTMLPages
                         UpdatedInfo += "prefix = '" + prefix + "', ";
                         UpdatedInfo += "phone = '" + phone + "', ";
                         UpdatedInfo += "city = '" + city + "', ";
-                        UpdatedInfo += "hob1 = '" + hob1 + "', ";
-                        UpdatedInfo += "hob2 = '" + hob2 + "', ";
-                        UpdatedInfo += "hob3 = '" + hob3 + "', ";
-                        UpdatedInfo += "hob4 = '" + hob4 + "', ";
-                        UpdatedInfo += "hob5 = '" + hob5 + "', ";
+                        UpdatedInfo += "hob1 = '" + ch1 + "', ";
+                        UpdatedInfo += "hob2 = '" + ch2 + "', ";
+                        UpdatedInfo += "hob3 = '" + ch3 + "', ";
+                        UpdatedInfo += "hob4 = '" + ch4 + "', ";
+                        UpdatedInfo += "hob5 = '" + ch5 + "', ";
 
                         UpdatedInfo += "pass = '" + pass + "' ";
                         UpdatedInfo += "WHERE uName = '" + uName + "'";

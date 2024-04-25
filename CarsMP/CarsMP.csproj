@@ -135,6 +135,7 @@
     <Content Include="HTMLPages\AdminShowUsers.aspx" />
     <Content Include="HTMLPages\DeleteAction.aspx" />
     <Content Include="HTMLPages\DeleteActionQuery.aspx" />
+    <Content Include="HTMLPages\DeleteAllAction.aspx" />
     <Content Include="HTMLPages\EditUserInfo.aspx" />
     <Content Include="HTMLPages\Login.aspx" />
     <Content Include="HTMLPages\Logout.aspx" />
@@ -204,7 +205,7 @@
     <Content Include="Images\ZO6corvette1.jpg" />
     <Content Include="Images\ZO6corvetteInterior.jpg" />
     <Content Include="Images\ZO6corvetteRear.jpg" />
-    <Content Include="JavaScript\checkRegistration.js" />
+    <Content Include="JavaScript\CheckForm.js" />
     <Content Include="JavaScript\detectField.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -355,6 +356,13 @@
     </Compile>
     <Compile Include="HTMLPages\DeleteActionQuery.aspx.designer.cs">
       <DependentUpon>DeleteActionQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\DeleteAllAction.aspx.cs">
+      <DependentUpon>DeleteAllAction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\DeleteAllAction.aspx.designer.cs">
+      <DependentUpon>DeleteAllAction.aspx</DependentUpon>
     </Compile>
     <Compile Include="HTMLPages\EditUserInfo.aspx.cs">
       <DependentUpon>EditUserInfo.aspx</DependentUpon>
