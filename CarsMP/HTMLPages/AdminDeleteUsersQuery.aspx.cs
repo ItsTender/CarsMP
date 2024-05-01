@@ -27,7 +27,7 @@ namespace CarsMP.HTMLPages
             {
 
                 st += "<h2 style=\"font-size:50px; margin-top:50px;\">Search and Delete Users</h2>\r\n";
-                st += "<form method=\"post\" runat=\"server\" style=\"text-align:center;\">\r\n    <select name=\"field\"; id=\"field\"; onclick=\"DetectField();\">\r\n        <option>Choose :</option>\r\n        <option value=\"fName\">First Name</option>\r\n        <option value=\"lName\">Last Name</option>\r\n        <option value=\"email\">Email</option>\r\n        <option value=\"yearBorn\">Year Born</option>\r\n        <option value=\"gender\">Gender</option>\r\n        <option value=\"prefix\">Prefix</option>\r\n        <option value=\"phone\">Phone</option>\r\n        <option value=\"city\">City</option>\r\n        <option value=\"hobby\">Hobby</option>\r\n    </select>\r\n    <br />\r\n    <div id=\"query\"></div>\r\n    <br />\r\n    <input type=\"submit\" name=\"submit\" value=\"Search\" />\r\n</form> <br />";
+                st += "<form method=\"post\" runat=\"server\" style=\"text-align:center;\">\r\n    <select name=\"field\"; id=\"field\";\">\r\n        <option>Choose:</option>\r\n        <option value=\"fName\">First Name</option>\r\n        <option value=\"lName\">Last Name</option>\r\n        <option value=\"email\">Email</option>\r\n        <option value=\"yearBorn\">Year Born</option>\r\n        <option value=\"gender\">Gender</option>\r\n        <option value=\"prefix\">Prefix</option>\r\n        <option value=\"phone\">Phone</option>\r\n        <option value=\"city\">City</option>\r\n        <option value=\"hobby\">Hobby</option>\r\n    </select>\r\n    <br />\r\n    <input type='text' name='value'/>\r\n    <br />\r\n    <input type=\"submit\" name=\"submit\" value=\"Search\" />\r\n</form> <br /><br />";
 
                 string hob = "";
                 // وضع اسم الحقل و قيمة الحقل في متغيرات
@@ -38,7 +38,7 @@ namespace CarsMP.HTMLPages
                 string tableName = "usersTbl";
                 string sqlSelect = "";
 
-                if (Request.Form["submit"] != null)
+                if (Request.Form["submit"] != null && field != "Choose:")
                 {
                     if (field == "yearBorn" || field == "gender" || field == "prefix" || field == "city")
                     {
