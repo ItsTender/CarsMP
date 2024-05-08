@@ -8,11 +8,6 @@
 
     <style>
 
-        table{
-            margin: auto; 
-            border: 0;
-        }
-
         input {
             text-align:center
         }
@@ -25,7 +20,7 @@
 
 <form method="post" runat="server" onsubmit="return CheckForm();">
 
-    <table>
+        <table style="width:auto;height:auto;">
 
         <tr>
             <td colspan="2"><h2 style="color:deepskyblue;"> Registration Form </h2></td>
@@ -168,7 +163,9 @@
             <td><input type="password"; id="rePassword"; name="rePassword" required/></td>
         </tr>
 
-        <tr></tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
 
         <tr>
             <td colspan="2"> <input type="submit"; value="Register" ; name="submit"; id="submit" /></td>

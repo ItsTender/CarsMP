@@ -26,9 +26,9 @@ namespace CarsMP.HTMLPages
 
             string fileName = "usersDB.mdf";
 
-            if (Session["uName"].ToString() == "Guest")
+            if (Session["uName"].ToString() == "Guest" || Session["admin"].ToString() == "yes")
             {
-                msg += "<a>You are not Registered to the Website</a> <br/><br/>";
+                msg += "<a>Only Registered users can edit their profile info!</a> <br/><br/>";
                 msg += "<a href='Login.aspx' style=\"color:deepskyblue; font-size:xx-large; font-family:Calibri\">Login with your Account</a> <br /> <br />";
                 msg += "<a href='Cars.aspx' style=\"color:deepskyblue; font-size:xx-large; font-family:Calibri;\">Go to Favourite Cars Page</a> <br />";
             }
@@ -97,7 +97,7 @@ namespace CarsMP.HTMLPages
                     }
 
 
-                    if (Request.Form["submit"] != null)
+                    if (this.IsPostBack)
                     {
                         fName = Request.Form["firstName"];
                         lName = Request.Form["lastName"];

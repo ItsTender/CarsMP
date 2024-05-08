@@ -12,7 +12,7 @@
 
 <form method="post" runat="server" onsubmit="return CheckForm();">
 
-<table style="border: 0px solid white ; margin: 0px auto;" width="1000px">
+<table style="width:auto;height:auto;">
 
     <tr>
         <td colspan="3"><h2 style="color:deepskyblue;"> Edit User Info </h2></td>
@@ -23,6 +23,7 @@
     <tr>
         <td> Username:</td>
         <td><input type="text"; id="username"; name="username" disabled="disabled" value="<%= uName %>"/></td>
+        <td><input type="text"; id="mUName"; size="33"; style="display:none; background-color:silver;" disabled="disabled" /> </td>
     </tr>
 
 
@@ -269,7 +270,9 @@ else
          <td><input type="password"; id="rePassword"; name="rePassword" value="<%= pass%>" required/></td>
     </tr>
 
-    <tr></tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
 
     <tr>
         <td colspan="3"> <input type="submit"; value="Apply Changes" ; name="submit"; id="submit" /></td>
