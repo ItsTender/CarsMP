@@ -6,59 +6,7 @@
 
     <meta charset="utf-8" />
 <title>  Specs of The Cars Shown </title>
-
-
-        <style> 
-
-
-body {
-    background-color: whitesmoke;
-}
-
-.class1 {
-    background-color: darkslategray;
-    font-size: 1.2vw;
-    font-family: Calibri;
-}
-
-.class2 {
-    background-color: #2a566e;
-        font-size: 1.2vw;
-    font-family: Calibri;
-}
-
-.class3 {
-    background-color: dodgerblue;
-    font-size: 1.2vw;
-    font-family: Calibri;}
-
-.class4 {
-    background-color: deepskyblue;
-    font-size: 1.2vw;
-    font-family: Calibri;}
-
-table {
-    text-align: center;
-}
-
-td {
-    width: 220px;
-    height: 40px;
-    border: 2px solid gray;
-    color: whitesmoke;
-}
-
-th {
-    width: 220px;
-    height: 40px;
-    border: 2.5px solid gray;
-    font-size: 1.5vw;
-    color: whitesmoke;
-    font-family: Calibri;
-    background-color: dimgray;
-}
-
-            </style>
+    <link href="../StyleSheets/StyleSheetTable.css" rel="stylesheet" />
 
 
 

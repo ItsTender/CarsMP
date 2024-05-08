@@ -1,7 +1,4 @@
 ﻿body {
-    justify-content: center;
-    align-items: center;
-    background-color: whitesmoke;
 }
 
 h1 {
@@ -18,7 +15,7 @@ h1 {
         content: attr(data-text);
         position: absolute;
         top: 0;
-        left: 44.425%;
+        left: 43.275%;
         height: 100%;
         width: 0;
         color: deepskyblue;
@@ -35,7 +32,7 @@ h1 {
     }
 
     70%,90% {
-        width: 11.125%;
+        width: 13.4%;
     }
 }
 
@@ -47,6 +44,7 @@ h4 {
 
 h2 {
     text-align: center;
+    font-size: large;
     color: black;
     font-family: serif;
 }

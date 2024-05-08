@@ -4,63 +4,7 @@
     
      <meta charset="utf-8" />
  <title> Top 5 Favourite Cars Introduction Page </title>
-
-
-    <style>
-
-body {
-}
-
-h1 {
-    text-align: center;
-    font-family: serif;
-    position: relative;
-    font-size: 4vw;
-    color: lightgray;
-    -webkit-text-stroke: 2px gray;
-    text-transform: uppercase;
-}
-
-    h1::before {
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 43.275%;
-        height: 100%;
-        width: 0;
-        color: deepskyblue;
-        -webkit-text-stroke: 0vw gray;
-        border-right: 2px solid deepskyblue;
-        overflow: hidden;
-        animation: animate 5s linear infinite;
-    }
-
-@keyframes animate {
-
-    0%,10%,100% {
-        width: 0;
-    }
-
-    70%,90% {
-        width: 13.4%;
-    }
-}
-
-h4 {
-    text-align: left;
-    color: black;
-    font-family: Calibri;
-}
-
-h2 {
-    text-align: center;
-    font-size:large;
-    color: black;
-    font-family: serif;
-}
-
-
-        </style>
+    <link href="../StyleSheets/StyleSheetIntro.css" rel="stylesheet" />
 
 
 

@@ -265,7 +265,9 @@
     <Content Include="Site.Master" />
     <Content Include="StyleSheets\StyleSheetCars.css" />
     <Content Include="StyleSheets\StyleSheetIndepth.css" />
+    <Content Include="StyleSheets\StyleSheetIntro.css" />
     <Content Include="StyleSheets\StyleSheetMaster.css" />
+    <Content Include="StyleSheets\StyleSheetSpecial.css" />
     <Content Include="StyleSheets\StyleSheetTable.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
